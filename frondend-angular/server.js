@@ -5,7 +5,6 @@ const port = process.env.PORT || 8080;
 
 // La ruta correcta es 'dist/catalogo-peliculas' basado en tu angular.json
 const appPath = path.join(__dirname, 'dist', 'catalogo-peliculas'); 
-// --------------------
 
 // Servir archivos estáticos
 app.use(express.static(appPath));
