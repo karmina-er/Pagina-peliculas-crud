@@ -1,17 +1,23 @@
 const express = require('express');
 const path = require('path');
+
 const app = express();
 const port = process.env.PORT || 8080;
 
-// La ruta correcta es 'dist/catalogo-peliculas' basado en tu angular.json
-const appPath = path.join(__dirname, 'dist', 'catalogo-peliculas'); 
+// Ruta de los archivos compilados de Angular
+// Ajusta si tu server.js está dentro de frontend-angular
+const appPath = path.join(__dirname, 'dist/catalogo-peliculas');
 
-// Servir archivos estáticos
+// Servir archivos estáticos de Angular
 app.use(express.static(appPath));
 
-// Manejar todas las rutas de Angular (para que F5 funcione)
+// Manejar todas las rutas (para que F5 o rutas internas funcionen)
 app.get('/*', (req, res) => {
-  res.sendFile(path.join(appPath, 'index.html'));
+  res.sendFile(path.join(appPath, 'index.html'), err => {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
 });
 
 // Iniciar el servidor
