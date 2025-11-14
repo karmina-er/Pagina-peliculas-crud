@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <h2>Agregar Película</h2>
+
+  <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label>Título</label>
+      <input type="text" formControlName="title" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+      <label>Año</label>
+      <input type="number" formControlName="year" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+      <label>Director</label>
+      <input type="text" formControlName="director" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+      <label>Estudio</label>
+      <input type="text" formControlName="studio" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="loading">
+      {{ loading ? 'Guardando...' : 'Agregar Película' }}
+    </button>
+  </form>
+
+  <p class="mt-3 text-success">{{ message }}</p>
+</div>

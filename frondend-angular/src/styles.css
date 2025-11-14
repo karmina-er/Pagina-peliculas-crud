@@ -1,0 +1,25 @@
+/* Imagen de fondo para todo el sitio */
+body {
+  background-image: url('images/movie.jpg');
+  background-size: cover;         
+  background-repeat: no-repeat;   
+  background-attachment: fixed;   
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+footer.footer {
+  margin-top: auto;
+}

@@ -1,0 +1,40 @@
+<!-- NAVBAR / HEADER -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+    MovieApp
+    </a>
+
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/movies">Películas</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="container mt-5">
+  <!-- DESCRIPCIÓN -->
+  <div class="description p-4 rounded text-white mb-5">
+    <h2>Catálogo de Películas</h2>
+    <p>
+      Este es el catálogo de películas de nuestra aplicación. Aquí encontrarás una variedad de títulos para explorar y disfrutar.
+    </p>
+  </div>
+
+  <!-- Aquí se cargan los componentes según la ruta -->
+  <router-outlet></router-outlet>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer py-4 bg-dark text-center text-white">
+  <div class="container">
+    <p>Materia: Conceptualización de entornos de desarrollo de aplicaciones y servicios </p>
+    <p>Nombre: Tammy Karmina Espinosa Rosete</p>
+    <p>Código: 220844906</p>
+    <p>Correo: tammy.espinosa23b@udgvirtual.mx</p>
+  </div>
+</footer>
