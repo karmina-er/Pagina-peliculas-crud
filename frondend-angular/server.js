@@ -3,7 +3,6 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 8080;
 
-// --- ¡CORRECCIÓN! ---
 // La ruta correcta es 'dist/catalogo-peliculas' basado en tu angular.json
 const appPath = path.join(__dirname, 'dist', 'catalogo-peliculas'); 
 // --------------------
